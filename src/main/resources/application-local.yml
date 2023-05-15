@@ -4,7 +4,7 @@ spring:
     enabled: true
     path: '/console'
   datasource:
-    url: 'jdbc:h2:file:X:/Java/demo/todo-db'
+    url: 'jdbc:h2:file:C:/Users/kąkuter/IdeaProjects/TaskSpringApp3/todo-db'
   jpa:
     hibernate:
       ddl-auto: update
