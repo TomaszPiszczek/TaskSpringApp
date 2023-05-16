@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class InfoController {
-    private DataSourceProperties dataSource;
-    private TaskConfigurationProperties myProp;
+    private final DataSourceProperties dataSource;
+    private final TaskConfigurationProperties myProp;
 
     InfoController(DataSourceProperties dataSource, TaskConfigurationProperties myProp) {
         this.dataSource = dataSource;
         this.myProp = myProp;
     }
-
 
 
     @GetMapping("/info/url")

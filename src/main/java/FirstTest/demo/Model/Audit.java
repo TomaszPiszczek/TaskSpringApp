@@ -12,14 +12,13 @@ public class Audit {
     private LocalDateTime updatedOn;
 
     @PrePersist
-    void prePersist()
-    {
+    void prePersist() {
         createdOn = LocalDateTime.now();
     }
 
 
     @PreUpdate
-    void preMerge(){
+    void preMerge() {
         updatedOn = LocalDateTime.now();
     }
 }

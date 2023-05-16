@@ -17,9 +17,8 @@ import static org.slf4j.LoggerFactory.*;
 
 @Controller
 public class TaskController {
-    private final TaskRepository repository;
-
     public static final Logger logger = getLogger(TaskController.class);
+    private final TaskRepository repository;
 
     public TaskController(TaskRepository repository) {
         this.repository = repository;

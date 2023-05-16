@@ -10,7 +10,7 @@ public class TaskConfigurationProperties {
 
     private Template template;
 
-    public Template getTemplate(){
+    public Template getTemplate() {
         return template;
     }
 
@@ -18,7 +18,7 @@ public class TaskConfigurationProperties {
         this.template = template;
     }
 
-    public static class Template{
+    public static class Template {
         private boolean allowMultipleTask;
 
         public boolean isAllowMultipleTask() {

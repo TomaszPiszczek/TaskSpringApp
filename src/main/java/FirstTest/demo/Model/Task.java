@@ -13,6 +13,8 @@ public class Task extends TaskBase {
     @Embedded
     Audit audit = new Audit();
 
+
+
     @ManyToOne
     @JoinColumn(name = "task_group_id")
     private TaskGroup group;
@@ -21,12 +23,10 @@ public class Task extends TaskBase {
     public Task() {
     }
 
-
-
-
-
-
-
+    public Task(LocalDateTime deadline,String description) {
+        this.deadline = deadline;
+        this.description = description;
+    }
 
     public void setDeadline(LocalDateTime deadline) {
         this.deadline = deadline;
