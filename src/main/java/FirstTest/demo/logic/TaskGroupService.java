@@ -12,8 +12,7 @@ import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.List;
 import java.util.stream.Collectors;
-@Service
-@RequestScope
+
 
 public class TaskGroupService {
     private TaskGroupRepository repository;
@@ -40,6 +39,7 @@ public class TaskGroupService {
         TaskGroup result = repository.findById(groupId)
                 .orElseThrow(()-> new IllegalArgumentException("Taskgroup with id not found"));
         result.setDone(!result.isDone());
+        repository.save(result);
     }
 
 

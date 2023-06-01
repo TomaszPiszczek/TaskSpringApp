@@ -1,6 +1,7 @@
 package FirstTest.demo.Model.projection;
 
 import FirstTest.demo.Model.Task;
+import FirstTest.demo.Model.TaskGroup;
 
 import java.time.LocalDateTime;
 
@@ -25,7 +26,7 @@ public class GroupTaskWriteModel {
         this.deadline = deadline;
     }
 
-    public Task toTask(){
+    public Task toTask(TaskGroup result){
         return new Task(deadline,description);
     }
 }

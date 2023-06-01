@@ -4,12 +4,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
-
+/*
 @MappedSuperclass
 abstract public class TaskBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+     int id;
     String description;
     boolean done;
 
@@ -36,4 +36,4 @@ abstract public class TaskBase {
     public void setDone(boolean done) {
         this.done = done;
     }
-}
+}*/

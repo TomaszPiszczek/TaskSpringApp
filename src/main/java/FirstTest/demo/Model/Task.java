@@ -6,8 +6,45 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tasks")
-public class Task extends TaskBase {
+public class Task  {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int id;
+    String description;
+    boolean done;
 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
+    }
+
+    public Audit getAudit() {
+        return audit;
+    }
+
+    public void setAudit(Audit audit) {
+        this.audit = audit;
+    }
 
     private LocalDateTime deadline;
     @Embedded
@@ -23,9 +60,16 @@ public class Task extends TaskBase {
     public Task() {
     }
 
-    public Task(LocalDateTime deadline,String description) {
-        this.deadline = deadline;
+    public Task(LocalDateTime deadline,String description,TaskGroup group) {
         this.description = description;
+        this.deadline = deadline;
+        if(group!=null){
+            this.group=group;
+        }
+    }
+
+    public Task(LocalDateTime deadline,String description) {
+        this(deadline,description,null);
     }
 
     public void setDeadline(LocalDateTime deadline) {
